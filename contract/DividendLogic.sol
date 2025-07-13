@@ -1,10 +1,12 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
+// import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "@openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol";
+// import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 
-abstract contract DividendLogic is Ownable {
+abstract contract DividendLogic is OwnableUpgradeable {
     // 存储在调用合约（MyToken2）中
     mapping(address => uint256) public dividends;  
     mapping(address => uint256) public claimedDividends;
@@ -43,21 +45,24 @@ abstract contract DividendLogic is Ownable {
         //1、检查管理员是否发送了ETH
         require(msg.value > 0, "No ETH sent for dividends");
         //2、检查是否发行了代币
-        require(IERC20(token).totalSupply() > 0, "No tokens issued");
+        // require(IERC20(token).totalSupply() > 0, "No tokens issued");
+        require(IERC20Upgradeable(token).totalSupply() > 0, "No tokens issued");
 
         //3、将总分红数额累加
         totalDividends += msg.value;
         lastDividendTimestamp = block.timestamp;
 
         //4、获取代币总供应量(假设为公司总股份)
-        uint256 totalTokens = IERC20(token).totalSupply();
+        // uint256 totalTokens = IERC20(token).totalSupply();
+        uint256 totalTokens = IERC20Upgradeable(token).totalSupply();
 
         //5、遍历持币者列表，计算每个持币者的分红数额
         for (uint256 i = 0; i < holders.length; i++) {
             //获取分红的名单
             address holder = holders[i];
             //获取持股人投资的股份
-            uint256 balance = IERC20(token).balanceOf(holder);
+            // uint256 balance = IERC20(token).balanceOf(holder);
+            uint256 balance = IERC20Upgradeable(token).balanceOf(holder);
             if (balance > 0) {
                 //按照份额将分红分发给投资者
                 dividends[holder] += (msg.value * balance) / totalTokens;

@@ -2,3 +2,6 @@
 src = "src"
 out = "out"
 libs = ["lib"]
+
+[dependencies]
+openzeppelin-contracts-upgradeable = { git = "https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable", tag = "v4.9.3" }

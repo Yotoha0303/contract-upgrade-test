@@ -6,7 +6,7 @@ import "./DividendLogic.sol";
 
 //MyToken(V2)
 contract MyToken2 is MyToken, DividendLogic {
-    function getVersion() public pure returns (string memory) {
-        return "V2";
-    }
+    //  function getVersion() public pure virtual  override  returns(string memory){
+    //     return "V2";
+    // }
 }
