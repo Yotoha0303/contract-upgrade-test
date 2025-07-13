@@ -6,6 +6,12 @@ import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
+// import "../lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol";
+// import "../lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/ERC20Upgradeable.sol";
+// import "../lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol";
+// import "../lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/UUPSUpgradeable.sol";
+
+
 //合约V1版本
 contract MyToken is
     Initializable,
