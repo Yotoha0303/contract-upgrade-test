@@ -297,11 +297,6 @@
 						"internalType": "uint256",
 						"name": "initialSupply",
 						"type": "uint256"
-					},
-					{
-						"internalType": "address",
-						"name": "initialOwner",
-						"type": "address"
 					}
 				],
 				"name": "initialize",
@@ -602,11 +597,11 @@
 	},
 	"sources": {
 		"contract/MyToken.sol": {
-			"keccak256": "0x38b1ee2c4e79e8209bfccf4c29b26cd0bf350ddb0df08317cb830ec81114266f",
+			"keccak256": "0x23bd9077c7644f3e66b852cc3a41a109b21c7a34596a4b58e37ff469851ded06",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://6e9919e94f320f674285a2e554942d69d2513f1c59d7ed19b2a61e5d4c5b06da",
-				"dweb:/ipfs/QmP1abgKei3JZ1f6o7A5QxCsRjw22NjJcNCGxdW4gLBuDv"
+				"bzz-raw://33057b5c3e49332696105b04e64be1167369ed867c236c3abdb0add6d4964177",
+				"dweb:/ipfs/QmYJrj459QtVy6s2qdZTehbptfX9wbGiPx79NFdjhCzXmS"
 			]
 		},
 		"lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol": {

@@ -1,12 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-// import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol";
-// import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
-abstract contract DividendLogic is OwnableUpgradeable {
+abstract contract DividendLogic is Initializable,OwnableUpgradeable {
     // 存储在调用合约（MyToken2）中
     mapping(address => uint256) public dividends;  
     mapping(address => uint256) public claimedDividends;
@@ -17,6 +16,13 @@ abstract contract DividendLogic is OwnableUpgradeable {
 
     event DividendDistributed(uint256 amount, uint256 timestamp);
     event DividendClaimed(address indexed user, uint256 amount);
+
+    // 重要：升级兼容的初始化函数
+    function __DividendLogic_init() internal onlyInitializing {
+        __Ownable_init(); // 如果需要的话
+        totalDividends = 0;
+        lastDividendTimestamp = 0;
+    }
 
     // 初始化分红相关状态变量
     function initializeDividends() external onlyOwner {

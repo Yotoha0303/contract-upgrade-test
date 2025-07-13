@@ -473,11 +473,6 @@
 						"internalType": "uint256",
 						"name": "initialSupply",
 						"type": "uint256"
-					},
-					{
-						"internalType": "address",
-						"name": "initialOwner",
-						"type": "address"
 					}
 				],
 				"name": "initialize",
@@ -488,6 +483,13 @@
 			{
 				"inputs": [],
 				"name": "initializeDividends",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "initializeV2",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -811,27 +813,27 @@
 	},
 	"sources": {
 		"contract/DividendLogic.sol": {
-			"keccak256": "0x047e27eb4bed0b89fa972e5a5af9271a4ccc14d91f5c85fb2790d2c515b66419",
+			"keccak256": "0x05cb5fae2b97bdb4e51fda248e19ba92c83e602bea5dc7c254e80442a144912f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b61193e7cca2ed17ffe61e5e0e5baceeb6850389f18db1fee30a7b9df24362c4",
-				"dweb:/ipfs/Qmbmt6asDuSEJBMuLHxqgLG3Tn9UZiwAsJQ87X2ca8nDeB"
+				"bzz-raw://adc0cec590f297b89adcd261b6245831f420f454a7fd825a2e937dce88148c49",
+				"dweb:/ipfs/QmRnDoT8Heu1uyfetdaEySDjxdsHFzXjPmp2wqr18qk9Fh"
 			]
 		},
 		"contract/MyToken.sol": {
-			"keccak256": "0x38b1ee2c4e79e8209bfccf4c29b26cd0bf350ddb0df08317cb830ec81114266f",
+			"keccak256": "0x23bd9077c7644f3e66b852cc3a41a109b21c7a34596a4b58e37ff469851ded06",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://6e9919e94f320f674285a2e554942d69d2513f1c59d7ed19b2a61e5d4c5b06da",
-				"dweb:/ipfs/QmP1abgKei3JZ1f6o7A5QxCsRjw22NjJcNCGxdW4gLBuDv"
+				"bzz-raw://33057b5c3e49332696105b04e64be1167369ed867c236c3abdb0add6d4964177",
+				"dweb:/ipfs/QmYJrj459QtVy6s2qdZTehbptfX9wbGiPx79NFdjhCzXmS"
 			]
 		},
 		"contract/MyToken2.sol": {
-			"keccak256": "0x3e5106666c8304f421c1c459f6dfa7913dd170e41f4a9bad22e5be1b30e22cfa",
+			"keccak256": "0xc86b79b9b1ff3ff14917fa07578c21100976d4df3aee83c39ddd074cb5ebd31f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://4bbaf3658cbee241713957f783ef20be01ea950630714ee0346f3ee2ece610b1",
-				"dweb:/ipfs/QmTsNuVqAfLwGzeZEWCjQZtoJrgQt83ngSGe12cvG4QG88"
+				"bzz-raw://65e8263a6c6dbb34cc4d87458937144678ec9cac1f7bbb523ff5c8d15b143f22",
+				"dweb:/ipfs/Qmc3HfEWkL2mYC7S9cNpRrg6XNdvoAgjMDiWBzqey9GwNR"
 			]
 		},
 		"lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol": {
