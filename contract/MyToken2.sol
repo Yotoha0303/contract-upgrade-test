@@ -22,9 +22,9 @@ contract MyToken2 is MyToken, DividendLogic {
     //     MyToken.initialize(_x);
     // }
 
-    // function getVersion() public view returns(uint256){
-    //     return MyToken.x;
-    // }
+    function getVersion() public view returns(uint256){
+        return "V2";
+    }
 
     // constructor() {}
 }

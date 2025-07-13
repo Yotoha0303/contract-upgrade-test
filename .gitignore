@@ -1,6 +1,9 @@
 # Compiler files
 cache/
 out/
+.deps/
+artifacts/
+.states/git
 
 # Ignores development broadcast logs
 !/broadcast
