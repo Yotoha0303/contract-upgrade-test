@@ -11,15 +11,19 @@ import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 contract MyToken is ERC20, Ownable, Initializable {
     uint256 public x;
 
-    function initialize(uint256 _x,uint256 initialSupply) public onlyInitializing {
-        _mint(msg.sender, initialSupply);
+    function initialize(uint256 _x) public onlyInitializing {
         x = _x;
+    }
+
+    function initializeSupply(uint256 initialSupply) public {
+        _mint(msg.sender, initialSupply);
     }
 
     //可能需要修改
     constructor(
         
     ) ERC20("MyToken", "MTK") Ownable(msg.sender) {
+        
         
     }
 
