@@ -60,3 +60,6 @@
 
 ```
 
+参考网站
+1、「开发标准」https://eips.ethereum.org/EIPS/eip-1967
+2、「课程」https://www.wtf.academy/zh/course/solidity103/UUPS
