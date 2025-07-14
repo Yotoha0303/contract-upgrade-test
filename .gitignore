@@ -2,9 +2,9 @@
 cache/
 out/
 .deps/
-artifacts/
-.states/
+artifacts
 .github/
+.states
 
 # Ignores development broadcast logs
 !/broadcast
