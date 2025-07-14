@@ -63,3 +63,38 @@
 参考网站
 1、「开发标准」https://eips.ethereum.org/EIPS/eip-1967
 2、「课程」https://www.wtf.academy/zh/course/solidity103/UUPS
+
+操作细节
+1、查看依赖版本
+```
+git submodule
+```
+2、移除子模块
+示例：移除`openzeppelin-contracts-upgradeable`
+```
+git submodule deinit -f lib/openzeppelin-contracts-upgradeable
+git rm -f lib/openzeppelin-contracts-upgradeable
+rm -rf .git/modules/lib/openzeppelin-contracts-upgradeable
+```
+思路：
+1）移除`submodule`中的依赖信息
+2）删除在`lib`中，对应的依赖文件
+3）删除`.git`中，模块的信息
+4）直接移除在`gitmodules`中进行删除
+
+3、清除缓存
+```
+forge clean
+```
+
+4、查看版本
+示例：查看`lib/openzeppelin-contracts`文件中的版本信息
+```
+git -C lib/openzeppelin-contracts describe --tags
+```
+
+5、更新`foundry.toml`中的依赖信息
+```
+[dependencies]
+openzeppelin-contracts = { git = "https://github.com/OpenZeppelin/openzeppelin-contracts", tag = "v4.9.3" }
+```
