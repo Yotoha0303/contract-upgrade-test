@@ -93,8 +93,15 @@ forge clean
 git -C lib/openzeppelin-contracts describe --tags
 ```
 
-5、更新`foundry.toml`中的依赖信息
+5、更新`foundry.toml`中的依赖信息(删除依赖时删除。安装时，根据不同依赖填入对应内容)
 ```
 [dependencies]
 openzeppelin-contracts = { git = "https://github.com/OpenZeppelin/openzeppelin-contracts", tag = "v4.9.3" }
+```
+
+6、按照依赖(按具体情况而定)
+```
+forge install OpenZeppelin/openzeppelin-contracts
+forge install OpenZeppelin/openzeppelin-contracts-upgradeable
+forge install OpenZeppelin/openzeppelin-foundry-upgradeable
 ```
